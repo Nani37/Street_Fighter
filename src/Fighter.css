@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.fighter_main {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: 100vh;
+  width: 100%;
+  border: none;
+}
+.fighter_main_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.fighter_name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  padding-top: 18px;
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+}
+.fighter_name img {
+  height: 100%;
+  width: 100%;
+}
+.fighter_name a {
+  text-decoration: none;
+  color: red;
+}
+.fighter_logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+}
+.fighter_logo img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.fighter_logo:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.fighter_main_outer {
+  height: 500px;
+  margin-top: 20px;
+}
+.fighter_outer {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.p1 {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+}
+.p2 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 70px;
+  width: 50%;
+  align-items: center;
+}
+.fighter_player{
+  font-family: fantasy;
+  padding-left:55px;
+}
+.fighter_time{
+  font-family: fantasy;
+  font-size: 25px;
+}
+.player_1,
+.player_2 {
+  height: 200px;
+  width: 200px;
+}
+.player_1 img,
+.player_2 img {
+  height: 100%;
+  width: 100%;
+}
+.Winner {
+  font-size: 30px;
+  font-weight: bold;
+  color: yellow;
+  text-align: center;
+  margin-bottom: 550px;
+  text-shadow: 2px 2px 4px #000000;
+  /* animation: glow 1s infinite alternate; */
+}
+.winner_message {
+  animation: slideIn 0.5s ease-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px yellow, 0 0 10px orange;
+  }
+  to {
+    text-shadow: 0 0 20px yellow, 0 0 30px red;
+  }
+}
+.fighter_main2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.p1_kamehaga,
+.p2_kamehaga {
+  height: 50px;
+  width: 50px;
+}
+.p1_kamehaga img,
+.p2_kamehaga img {
+  height: 100%;
+  width: 100%;
+}
+.p1_kamehaga img {
+  animation: kamehamehaAnimation 1s forwards;
+}
+@keyframes kamehamehaAnimation {
+  0% {
+    transform: scale(0);
+    transform: translateX(+50px);
+    opacity: 1;  
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1);
+    transform: translateX(+100px);
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+    transform: translateX(+150px);
+  }
+}
+.p2_kamehaga img {
+  animation: kamehamehaAnimation2 1s forwards;
+}
+@keyframes kamehamehaAnimation2 {
+  0% {
+    transform: scale(0);
+    transform: translateX(-50px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+}
+.fighter_health {
+  height: 25px;
+  background: green;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  transition: width 0.3s linear;
+}
+
+.low-health {
+  background: rgb(255, 0, 0);
+  animation: flash 0.8s infinite alternate;
+}
+
+@keyframes flash {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+.kamehaga-players {
+  width: 200px;
+  height: auto;
+  transform: scale(1.2); /* increase proportionally */
+  transition: transform 0.2s ease-in-out; /* optional animation */
+}
+.p2_kamehaga {
+  width: 100px;   /* increase this until it feels right */
+  height: auto;
+}
+.p1_kamehaga {
+  width: 160px;   /* increase this until it feels right */
+  height: auto;
+}
