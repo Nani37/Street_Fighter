@@ -136,6 +136,7 @@ useEffect(() => {
       //     alert(`${winner} 🎉 Refresh to play again.`);
       play_sound(victory_sound, 1);
       setGameOver(true);
+      alert("Reload the page to continue the Rage");
     }
   }, [winner]);
 
@@ -248,3 +249,4 @@ useEffect(() => {
   );
 };
 export default Fighter;
+
